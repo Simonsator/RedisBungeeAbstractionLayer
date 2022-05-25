@@ -11,7 +11,7 @@
 	<parent>
 		<artifactId>redisbungee-abstraction-layer</artifactId>
 		<groupId>de.simonsator</groupId>
-		<version>1.0-RELEASE</version>
+		<version>1.0.1-RELEASE</version>
 	</parent>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -20,9 +20,9 @@
 	</properties>
 	<dependencies>
 		<dependency>
-			<groupId>com.github.limework</groupId>
-			<artifactId>redisbungee</artifactId>
-			<version>0.6.5</version>
+			<groupId>com.imaginarycode.minecraft</groupId>
+			<artifactId>RedisBungee-Bungee</artifactId>
+			<version>0.7.2-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>de.simonsator</groupId>
