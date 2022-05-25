@@ -4,10 +4,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>fake-redis-bungee-main</artifactId>
+	<artifactId>fake-redis-bungee-limework-implementation</artifactId>
 	<version>1.0-RELEASE</version>
 
-	<name>fake-redis-bungee</name>
+	<name>fake-redis-bungee-limework-implementation</name>
 	<parent>
 		<artifactId>fake-redis-bungee</artifactId>
 		<groupId>de.simonsator</groupId>
@@ -33,4 +33,23 @@
 			<url>sftp://ssh.strato.de/simonsator/repo</url>
 		</repository>
 	</distributionManagement>
+	<repositories>
+		<repository>
+			<id>jitpack.io</id>
+			<url>https://jitpack.io</url>
+		</repository>
+	</repositories>
+	<dependencies>
+		<dependency>
+			<groupId>com.github.limework</groupId>
+			<artifactId>redisbungee</artifactId>
+			<version>0.6.5</version>
+		</dependency>
+		<dependency>
+			<groupId>de.simonsator</groupId>
+			<artifactId>fake-redis-bungee-main</artifactId>
+			<version>1.0-RELEASE</version>
+			<scope>compile</scope>
+		</dependency>
+	</dependencies>
 </project>

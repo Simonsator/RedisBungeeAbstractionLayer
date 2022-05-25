@@ -48,5 +48,6 @@
 	</dependencies>
 	<modules>
 		<module>fake-redis-bungee-main</module>
+		<module>fake-redis-bungee-limework-implementation</module>
 	</modules>
 </project>

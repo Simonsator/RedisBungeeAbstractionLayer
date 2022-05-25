@@ -9,6 +9,10 @@ import java.util.UUID;
 public abstract class FakeRedisBungeeAPI {
 	private static FakeRedisBungeeAPI instance;
 
+	public FakeRedisBungeeAPI() {
+		instance = this;
+	}
+
 	public static FakeRedisBungeeAPI getApi() {
 		return instance;
 	}
