@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>fake-redis-bungee-limework-implementation</artifactId>
+	<artifactId>fake-redis-bungee-legacy-redisbungee-implementation</artifactId>
 	<version>1.0-RELEASE</version>
-	<name>fake-redis-bungee-limework-implementation</name>
+	<name>fake-redis-bungee-legacy-redisbungee-implementation</name>
 	<packaging>jar</packaging>
 	<parent>
 		<artifactId>fake-redis-bungee</artifactId>

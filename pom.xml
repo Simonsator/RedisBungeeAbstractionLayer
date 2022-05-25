@@ -36,6 +36,10 @@
 			<id>bungeecord-repo</id>
 			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
 		</repository>
+		<repository>
+			<id>jitpack.io</id>
+			<url>https://jitpack.io</url>
+		</repository>
 	</repositories>
 	<dependencies>
 		<dependency>
@@ -49,5 +53,6 @@
 	<modules>
 		<module>fake-redis-bungee-main</module>
 		<module>fake-redis-bungee-limework-implementation</module>
+		<module>fake-redis-bungee-legacy-redisbungee-implementation</module>
 	</modules>
 </project>
