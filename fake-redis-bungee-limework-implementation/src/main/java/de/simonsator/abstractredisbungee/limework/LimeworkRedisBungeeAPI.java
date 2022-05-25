@@ -1,9 +1,12 @@
 package de.simonsator.abstractredisbungee.limework;
 
+import com.imaginarycode.minecraft.redisbungee.RedisBungee;
 import com.imaginarycode.minecraft.redisbungee.RedisBungeeAPI;
 import de.simonsator.abstractredisbungee.FakeRedisBungeeAPI;
 import de.simonsator.abstractredisbungee.fakejedis.FakeJedisPool;
+import net.md_5.bungee.api.ProxyServer;
 import net.md_5.bungee.api.config.ServerInfo;
+import net.md_5.bungee.api.plugin.Plugin;
 import org.checkerframework.checker.nullness.qual.NonNull;
 
 import java.util.UUID;
@@ -42,6 +45,13 @@ public class LimeworkRedisBungeeAPI extends FakeRedisBungeeAPI {
 	}
 
 	public static boolean isCompatible() {
-		return true;
+		try {
+			Plugin redisbungee = ProxyServer.getInstance().getPluginManager().getPlugin("RedisBungee");
+			if (redisbungee != null && !(redisbungee instanceof RedisBungee))
+				return true;
+		} catch (Exception ignored) {
+
+		}
+		return false;
 	}
 }
