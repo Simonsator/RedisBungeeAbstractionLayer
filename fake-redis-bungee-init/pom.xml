@@ -30,18 +30,14 @@
 							<include>de.simonsator</include>
 						</includes>
 					</artifactSet>
-					<relocations>
-						<relocation>
-							<pattern>de.simonsator.abstractredisbungee</pattern>
-							<shadedPattern>de.simonsator.abstractredisbungee</shadedPattern>
-						</relocation>
-					</relocations>
 					<createDependencyReducedPom>false</createDependencyReducedPom>
 					<minimizeJar>false</minimizeJar>
 					<filters>
 						<filter>
 							<artifact>*:*</artifact>
 							<excludes>
+								<exclude>META-INF/*.xml</exclude>
+								<exclude>META-INF/*.properties</exclude>
 								<exclude>META-INF/*.SF</exclude>
 								<exclude>META-INF/*.DSA</exclude>
 								<exclude>META-INF/*.RSA</exclude>
