@@ -23,6 +23,7 @@
 			<groupId>com.imaginarycode.minecraft</groupId>
 			<artifactId>RedisBungee-Bungee</artifactId>
 			<version>0.7.2-SNAPSHOT</version>
+			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>de.simonsator</groupId>
