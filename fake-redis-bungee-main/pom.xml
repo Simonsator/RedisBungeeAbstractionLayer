@@ -7,7 +7,7 @@
 	<artifactId>fake-redis-bungee-main</artifactId>
 	<version>1.0-RELEASE</version>
 
-	<name>fake-redis-bungee</name>
+	<name>fake-redis-bungee-main</name>
 	<parent>
 		<artifactId>fake-redis-bungee</artifactId>
 		<groupId>de.simonsator</groupId>

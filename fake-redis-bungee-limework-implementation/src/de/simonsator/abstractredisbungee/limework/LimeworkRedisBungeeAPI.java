@@ -41,7 +41,7 @@ public class LimeworkRedisBungeeAPI extends FakeRedisBungeeAPI {
 		API.sendChannelMessage(channel, message);
 	}
 
-	public boolean isCompatible() {
+	public static boolean isCompatible() {
 		return true;
 	}
 }
