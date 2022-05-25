@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<artifactId>fake-redis-bungee-limework-implementation</artifactId>
-	<version>1.0-RELEASE</version>
+	<version>${revision}</version>
 	<name>fake-redis-bungee-limework-implementation</name>
 	<packaging>jar</packaging>
 	<parent>
@@ -27,7 +27,7 @@
 		<dependency>
 			<groupId>de.simonsator</groupId>
 			<artifactId>fake-redis-bungee-main</artifactId>
-			<version>1.0-RELEASE</version>
+			<version>${revision}</version>
 			<scope>compile</scope>
 		</dependency>
 	</dependencies>
