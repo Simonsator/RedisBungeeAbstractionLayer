@@ -6,8 +6,8 @@
 
 	<artifactId>fake-redis-bungee-limework-implementation</artifactId>
 	<version>1.0-RELEASE</version>
-
 	<name>fake-redis-bungee-limework-implementation</name>
+	<packaging>jar</packaging>
 	<parent>
 		<artifactId>fake-redis-bungee</artifactId>
 		<groupId>de.simonsator</groupId>
