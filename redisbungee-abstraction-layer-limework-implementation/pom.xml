@@ -4,12 +4,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>fake-redis-bungee-limework-implementation</artifactId>
+	<artifactId>redisbungee-abstraction-layer-limework-implementation</artifactId>
 	<version>${revision}</version>
-	<name>fake-redis-bungee-limework-implementation</name>
+	<name>redisbungee-abstraction-layer-limework-implementation</name>
 	<packaging>jar</packaging>
 	<parent>
-		<artifactId>fake-redis-bungee</artifactId>
+		<artifactId>redisbungee-abstraction-layer</artifactId>
 		<groupId>de.simonsator</groupId>
 		<version>1.0-RELEASE</version>
 	</parent>
@@ -26,7 +26,7 @@
 		</dependency>
 		<dependency>
 			<groupId>de.simonsator</groupId>
-			<artifactId>fake-redis-bungee-main</artifactId>
+			<artifactId>redisbungee-abstraction-layer-main</artifactId>
 			<version>${revision}</version>
 			<scope>compile</scope>
 		</dependency>

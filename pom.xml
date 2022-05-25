@@ -5,10 +5,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>de.simonsator</groupId>
-	<artifactId>fake-redis-bungee</artifactId>
+	<artifactId>redisbungee-abstraction-layer</artifactId>
 	<version>1.0-RELEASE</version>
 	<packaging>pom</packaging>
-	<name>fake-redis-bungee</name>
+	<name>redisbungee-abstraction-layer</name>
 	<url>https://github.com/Simonsator/FakeRedisBungee</url>
 	<properties>
 		<revision>1.0-RELEASE</revision>
@@ -51,9 +51,9 @@
 		</dependency>
 	</dependencies>
 	<modules>
-		<module>fake-redis-bungee-main</module>
-		<module>fake-redis-bungee-limework-implementation</module>
-		<module>fake-redis-bungee-legacy-redisbungee-implementation</module>
-		<module>fake-redis-bungee-init</module>
+		<module>redisbungee-abstraction-layer-main</module>
+		<module>redisbungee-abstraction-layer-limework-implementation</module>
+		<module>redisbungee-abstraction-layer-legacy-redisbungee-implementation</module>
+		<module>redisbungee-abstraction-layer-init</module>
 	</modules>
 </project>
