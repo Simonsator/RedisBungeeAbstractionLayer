@@ -54,5 +54,6 @@
 		<module>fake-redis-bungee-main</module>
 		<module>fake-redis-bungee-limework-implementation</module>
 		<module>fake-redis-bungee-legacy-redisbungee-implementation</module>
+		<module>fake-redis-bungee-init</module>
 	</modules>
 </project>
