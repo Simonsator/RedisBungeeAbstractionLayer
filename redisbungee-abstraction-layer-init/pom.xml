@@ -66,7 +66,7 @@
 		</dependency>
 		<dependency>
 			<groupId>de.simonsator</groupId>
-			<artifactId>redisbungee-abstraction-layer-main</artifactId>
+			<artifactId>redisbungee-abstraction-layer-main-bungee</artifactId>
 			<version>${revision}</version>
 			<scope>compile</scope>
 		</dependency>

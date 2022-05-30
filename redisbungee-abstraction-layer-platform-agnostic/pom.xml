@@ -7,7 +7,7 @@
 	<artifactId>redisbungee-abstraction-layer-platform-agnostic</artifactId>
 	<version>${revision}</version>
 
-	<name>redisbungee-abstraction-layer-main</name>
+	<name>redisbungee-abstraction-layer-main-bungee</name>
 	<parent>
 		<artifactId>redisbungee-abstraction-layer</artifactId>
 		<groupId>de.simonsator</groupId>

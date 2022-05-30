@@ -4,10 +4,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>redisbungee-abstraction-layer-main</artifactId>
+	<artifactId>redisbungee-abstraction-layer-main-bungee</artifactId>
 	<version>${revision}</version>
 
-	<name>redisbungee-abstraction-layer-main</name>
+	<name>redisbungee-abstraction-layer-main-bungee</name>
 	<parent>
 		<artifactId>redisbungee-abstraction-layer</artifactId>
 		<groupId>de.simonsator</groupId>
