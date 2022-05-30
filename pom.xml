@@ -36,21 +36,9 @@
 			<id>jitpack.io</id>
 			<url>https://jitpack.io</url>
 		</repository>
-		<repository>
-			<id>bungeecord-repo</id>
-			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
-		</repository>
 	</repositories>
-	<dependencies>
-		<dependency>
-			<groupId>net.md-5</groupId>
-			<artifactId>bungeecord-api</artifactId>
-			<version>1.18-R0.1-SNAPSHOT</version>
-			<type>jar</type>
-			<scope>provided</scope>
-		</dependency>
-	</dependencies>
 	<modules>
+		<module>redisbungee-abstraction-layer-main-velocity</module>
 		<module>redisbungee-abstraction-layer-platform-agnostic</module>
 		<module>redisbungee-abstraction-layer-main-bungee</module>
 		<module>redisbungee-abstraction-layer-limework-implementation</module>
