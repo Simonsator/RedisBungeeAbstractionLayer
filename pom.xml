@@ -55,6 +55,6 @@
 		<module>redisbungee-abstraction-layer-main-bungee</module>
 		<module>redisbungee-abstraction-layer-limework-implementation</module>
 		<module>redisbungee-abstraction-layer-legacy-redisbungee-implementation</module>
-		<module>redisbungee-abstraction-layer-init</module>
+		<module>redisbungee-abstraction-layer-init-bungee</module>
 	</modules>
 </project>
