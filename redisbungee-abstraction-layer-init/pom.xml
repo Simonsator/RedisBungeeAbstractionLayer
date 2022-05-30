@@ -11,7 +11,7 @@
 	<parent>
 		<artifactId>redisbungee-abstraction-layer</artifactId>
 		<groupId>de.simonsator</groupId>
-		<version>1.0.1-RELEASE</version>
+		<version>1.0.2-SNAPSHOT</version>
 	</parent>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -58,6 +58,12 @@
 		</plugins>
 	</build>
 	<dependencies>
+		<dependency>
+			<groupId>de.simonsator</groupId>
+			<artifactId>redisbungee-abstraction-layer-platform-agnostic</artifactId>
+			<version>${revision}</version>
+			<scope>compile</scope>
+		</dependency>
 		<dependency>
 			<groupId>de.simonsator</groupId>
 			<artifactId>redisbungee-abstraction-layer-main</artifactId>

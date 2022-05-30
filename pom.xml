@@ -6,12 +6,12 @@
 
 	<groupId>de.simonsator</groupId>
 	<artifactId>redisbungee-abstraction-layer</artifactId>
-	<version>1.0.1-RELEASE</version>
+	<version>1.0.2-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>redisbungee-abstraction-layer</name>
 	<url>https://github.com/Simonsator/FakeRedisBungee</url>
 	<properties>
-		<revision>1.0.1-RELEASE</revision>
+		<revision>1.0.2-SNAPSHOT</revision>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
@@ -51,6 +51,7 @@
 		</dependency>
 	</dependencies>
 	<modules>
+		<module>redisbungee-abstraction-layer-platform-agnostic</module>
 		<module>redisbungee-abstraction-layer-main</module>
 		<module>redisbungee-abstraction-layer-limework-implementation</module>
 		<module>redisbungee-abstraction-layer-legacy-redisbungee-implementation</module>
