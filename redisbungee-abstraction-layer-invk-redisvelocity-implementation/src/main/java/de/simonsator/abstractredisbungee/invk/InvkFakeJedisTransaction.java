@@ -1,4 +1,4 @@
-package de.simonsator.abstractredisbungee.legacy;
+package de.simonsator.abstractredisbungee.invk;
 
 import de.simonsator.abstractredisbungee.fakejedis.FakeJedisTransaction;
 import io.github.invvk.redisvelocity.jedis.Transaction;

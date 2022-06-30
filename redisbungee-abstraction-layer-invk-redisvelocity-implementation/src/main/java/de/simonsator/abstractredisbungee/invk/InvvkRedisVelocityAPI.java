@@ -1,4 +1,4 @@
-package de.simonsator.abstractredisbungee.legacy;
+package de.simonsator.abstractredisbungee.invk;
 
 import com.velocitypowered.api.proxy.server.ServerInfo;
 import de.simonsator.abstractredisbungee.FakeRedisVelocityAPI;

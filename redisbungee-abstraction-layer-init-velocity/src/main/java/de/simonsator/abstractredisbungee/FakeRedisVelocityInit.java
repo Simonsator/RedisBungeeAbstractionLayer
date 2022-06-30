@@ -1,6 +1,6 @@
 package de.simonsator.abstractredisbungee;
 
-import de.simonsator.abstractredisbungee.legacy.InvvkRedisVelocityAPI;
+import de.simonsator.abstractredisbungee.invk.InvvkRedisVelocityAPI;
 
 public class FakeRedisVelocityInit {
 	public static boolean init() {
