@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>redisbungee-abstraction-layer-legacy-redisbungee-implementation</artifactId>
+	<artifactId>redisbungee-abstraction-layer-invk-redisvelocity-implementation</artifactId>
 	<version>${revision}</version>
-	<name>redisbungee-abstraction-layer-legacy-redisbungee-implementation</name>
+	<name>redisbungee-abstraction-layer-invk-redisvelocity-implementation</name>
 	<packaging>jar</packaging>
 	<parent>
 		<artifactId>redisbungee-abstraction-layer</artifactId>
@@ -18,22 +18,29 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
+	<repositories>
+		<repository>
+			<id>Simonsators Repo</id>
+			<url>https://simonsator.de/repo/</url>
+		</repository>
+	</repositories>
 	<dependencies>
 		<dependency>
-			<groupId>com.github.limework</groupId>
-			<artifactId>redisbungee</artifactId>
-			<version>0.6.5</version>
+			<groupId>io.github.invvk</groupId>
+			<artifactId>RedisVelocity</artifactId>
+			<version>2.0.0</version>
+			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>de.simonsator</groupId>
-			<artifactId>redisbungee-abstraction-layer-main-bungee</artifactId>
+			<artifactId>redisbungee-abstraction-layer-main-velocity</artifactId>
 			<version>${revision}</version>
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
-			<groupId>net.md-5</groupId>
-			<artifactId>bungeecord-api</artifactId>
-			<version>1.18-R0.1-SNAPSHOT</version>
+			<groupId>com.velocitypowered</groupId>
+			<artifactId>velocity-api</artifactId>
+			<version>3.0.0-SNAPSHOT</version>
 			<type>jar</type>
 			<scope>provided</scope>
 		</dependency>

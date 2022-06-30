@@ -38,11 +38,13 @@
 		</repository>
 	</repositories>
 	<modules>
-		<module>redisbungee-abstraction-layer-main-velocity</module>
 		<module>redisbungee-abstraction-layer-platform-agnostic</module>
 		<module>redisbungee-abstraction-layer-main-bungee</module>
 		<module>redisbungee-abstraction-layer-limework-implementation</module>
 		<module>redisbungee-abstraction-layer-legacy-redisbungee-implementation</module>
 		<module>redisbungee-abstraction-layer-init-bungee</module>
+		<module>redisbungee-abstraction-layer-main-velocity</module>
+		<module>redisbungee-abstraction-layer-invk-redisvelocity-implementation</module>
+		<module>redisbungee-abstraction-layer-init-velocity</module>
 	</modules>
 </project>

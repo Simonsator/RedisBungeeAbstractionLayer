@@ -20,6 +20,13 @@
 	</properties>
 	<dependencies>
 		<dependency>
+			<groupId>net.md-5</groupId>
+			<artifactId>bungeecord-api</artifactId>
+			<version>1.18-R0.1-SNAPSHOT</version>
+			<type>jar</type>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
 			<groupId>com.github.limework.redisbungee</groupId>
 			<artifactId>RedisBungee-Bungee</artifactId>
 			<version>0.7.2</version>

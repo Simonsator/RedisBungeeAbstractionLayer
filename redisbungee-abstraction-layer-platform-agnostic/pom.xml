@@ -6,6 +6,13 @@
 
 	<artifactId>redisbungee-abstraction-layer-platform-agnostic</artifactId>
 	<version>${revision}</version>
+	<dependencies>
+		<dependency>
+			<groupId>org.checkerframework</groupId>
+			<artifactId>checker-qual</artifactId>
+			<version>3.12.0</version>
+		</dependency>
+	</dependencies>
 
 	<name>redisbungee-abstraction-layer-main-bungee</name>
 	<parent>
