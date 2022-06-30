@@ -14,7 +14,7 @@
 		</dependency>
 	</dependencies>
 
-	<name>redisbungee-abstraction-layer-main-bungee</name>
+	<name>redisbungee-abstraction-layer-platform-agnostic</name>
 	<parent>
 		<artifactId>redisbungee-abstraction-layer</artifactId>
 		<groupId>de.simonsator</groupId>
