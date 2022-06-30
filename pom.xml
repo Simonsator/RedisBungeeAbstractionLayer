@@ -9,7 +9,7 @@
 	<version>1.0.2-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>redisbungee-abstraction-layer</name>
-	<url>https://github.com/Simonsator/FakeRedisBungee</url>
+	<url>https://github.com/Simonsator/RedisBungeeAbstractionLayer</url>
 	<properties>
 		<revision>1.0.2-SNAPSHOT</revision>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
