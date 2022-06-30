@@ -1,17 +1,17 @@
 package de.simonsator.abstractredisbungee.legacy;
 
 import com.velocitypowered.api.proxy.server.ServerInfo;
-import de.simonsator.abstractredisbungee.FakeRedisBungeeAPI;
+import de.simonsator.abstractredisbungee.FakeRedisVelocityAPI;
 import de.simonsator.abstractredisbungee.fakejedis.FakeJedisPool;
 import io.github.invvk.redisvelocity.RedisVelocityAPI;
 import org.checkerframework.checker.nullness.qual.NonNull;
 
 import java.util.UUID;
 
-public class InvvkRedisBungeeAPI extends FakeRedisBungeeAPI {
+public class InvvkRedisVelocityAPI extends FakeRedisVelocityAPI {
 	private final RedisVelocityAPI API;
 
-	public InvvkRedisBungeeAPI() {
+	public InvvkRedisVelocityAPI() {
 		super();
 		API = RedisVelocityAPI.getRedisVelocityApi();
 	}

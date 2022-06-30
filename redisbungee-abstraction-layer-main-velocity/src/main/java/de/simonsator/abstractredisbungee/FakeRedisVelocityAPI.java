@@ -5,14 +5,14 @@ import org.checkerframework.checker.nullness.qual.NonNull;
 
 import java.util.UUID;
 
-public abstract class FakeRedisBungeeAPI extends FakeRedisUniversalAPI {
-	private static FakeRedisBungeeAPI instance;
+public abstract class FakeRedisVelocityAPI extends FakeRedisUniversalAPI {
+	private static FakeRedisVelocityAPI instance;
 
-	public FakeRedisBungeeAPI() {
+	public FakeRedisVelocityAPI() {
 		instance = this;
 	}
 
-	public static FakeRedisBungeeAPI getApi() {
+	public static FakeRedisVelocityAPI getApi() {
 		return instance;
 	}
 
