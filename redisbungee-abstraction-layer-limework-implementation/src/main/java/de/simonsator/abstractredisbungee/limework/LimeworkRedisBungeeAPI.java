@@ -2,20 +2,26 @@ package de.simonsator.abstractredisbungee.limework;
 
 import com.imaginarycode.minecraft.redisbungee.RedisBungee;
 import com.imaginarycode.minecraft.redisbungee.RedisBungeeAPI;
+import com.imaginarycode.minecraft.redisbungee.events.PubSubMessageEvent;
 import de.simonsator.abstractredisbungee.FakeRedisBungeeAPI;
+import de.simonsator.abstractredisbungee.events.PubSubMessageManager;
 import de.simonsator.abstractredisbungee.fakejedis.FakeJedisPool;
 import net.md_5.bungee.api.ProxyServer;
 import net.md_5.bungee.api.config.ServerInfo;
+import net.md_5.bungee.api.plugin.Listener;
+import net.md_5.bungee.api.plugin.Plugin;
+import net.md_5.bungee.event.EventHandler;
 import org.checkerframework.checker.nullness.qual.NonNull;
 
 import java.util.UUID;
 
-public class LimeworkRedisBungeeAPI extends FakeRedisBungeeAPI {
+public class LimeworkRedisBungeeAPI extends FakeRedisBungeeAPI implements Listener {
 	private final RedisBungeeAPI API;
 
-	public LimeworkRedisBungeeAPI() {
+	public LimeworkRedisBungeeAPI(Plugin pPluginInstance) {
 		super();
 		API = RedisBungeeAPI.getRedisBungeeApi();
+		ProxyServer.getInstance().getPluginManager().registerListener(pPluginInstance, this);
 	}
 
 	@Override
@@ -55,5 +61,10 @@ public class LimeworkRedisBungeeAPI extends FakeRedisBungeeAPI {
 
 		}
 		return false;
+	}
+
+	@EventHandler
+	public void onPubSubMessage(PubSubMessageEvent pEvent) {
+		PubSubMessageManager.getInstance().invokePubSubMessageEvent(pEvent.getChannel(), pEvent.getMessage());
 	}
 }

@@ -4,10 +4,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>redisbungee-abstraction-layer-legacy-redisbungee-implementation</artifactId>
+	<artifactId>redisbungee-abstraction-layer-main-bungee</artifactId>
 	<version>${revision}</version>
-	<name>redisbungee-abstraction-layer-legacy-redisbungee-implementation</name>
-	<packaging>jar</packaging>
+
+	<name>redisbungee-abstraction-layer-main-bungee</name>
 	<parent>
 		<artifactId>redisbungee-abstraction-layer</artifactId>
 		<groupId>de.simonsator</groupId>
@@ -20,22 +20,18 @@
 	</properties>
 	<dependencies>
 		<dependency>
-			<groupId>com.github.limework</groupId>
-			<artifactId>redisbungee</artifactId>
-			<version>0.6.5</version>
-		</dependency>
-		<dependency>
-			<groupId>de.simonsator</groupId>
-			<artifactId>redisbungee-abstraction-layer-main-bungee</artifactId>
-			<version>${revision}</version>
-			<scope>compile</scope>
-		</dependency>
-		<dependency>
 			<groupId>net.md-5</groupId>
 			<artifactId>bungeecord-api</artifactId>
 			<version>1.19-R0.1-SNAPSHOT</version>
 			<type>jar</type>
 			<scope>provided</scope>
 		</dependency>
+		<dependency>
+			<groupId>de.simonsator</groupId>
+			<artifactId>redisbungee-abstraction-layer-platform-agnostic</artifactId>
+			<version>${revision}</version>
+			<scope>compile</scope>
+		</dependency>
 	</dependencies>
+
 </project>

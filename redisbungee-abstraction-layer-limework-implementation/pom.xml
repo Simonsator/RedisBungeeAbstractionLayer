@@ -11,7 +11,7 @@
 	<parent>
 		<artifactId>redisbungee-abstraction-layer</artifactId>
 		<groupId>de.simonsator</groupId>
-		<version>1.0.1-RELEASE</version>
+		<version>2.0.0-RELEASE</version>
 	</parent>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -20,6 +20,13 @@
 	</properties>
 	<dependencies>
 		<dependency>
+			<groupId>net.md-5</groupId>
+			<artifactId>bungeecord-api</artifactId>
+			<version>1.19-R0.1-SNAPSHOT</version>
+			<type>jar</type>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
 			<groupId>com.github.limework.redisbungee</groupId>
 			<artifactId>RedisBungee-Bungee</artifactId>
 			<version>0.7.2</version>
@@ -27,7 +34,7 @@
 		</dependency>
 		<dependency>
 			<groupId>de.simonsator</groupId>
-			<artifactId>redisbungee-abstraction-layer-main</artifactId>
+			<artifactId>redisbungee-abstraction-layer-main-bungee</artifactId>
 			<version>${revision}</version>
 			<scope>compile</scope>
 		</dependency>
