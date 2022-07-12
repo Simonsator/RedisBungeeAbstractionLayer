@@ -15,7 +15,7 @@ An abstraction layer for RedisBungee making it easy to implement support for dif
 		<dependency>
 			<groupId>de.simonsator</groupId>
 			<artifactId>redisbungee-abstraction-layer-init-bungee</artifactId>
-			<version>1.0.2-SNAPSHOT</version>
+			<version>2.0.0-SNAPSHOT</version>
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
