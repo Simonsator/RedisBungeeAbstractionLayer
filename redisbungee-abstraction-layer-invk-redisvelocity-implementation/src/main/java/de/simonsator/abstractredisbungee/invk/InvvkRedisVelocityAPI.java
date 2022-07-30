@@ -1,9 +1,13 @@
 package de.simonsator.abstractredisbungee.invk;
 
+import com.velocitypowered.api.event.Subscribe;
+import com.velocitypowered.api.proxy.ProxyServer;
 import com.velocitypowered.api.proxy.server.ServerInfo;
 import de.simonsator.abstractredisbungee.FakeRedisVelocityAPI;
+import de.simonsator.abstractredisbungee.events.PubSubMessageManager;
 import de.simonsator.abstractredisbungee.fakejedis.FakeJedisPool;
 import io.github.invvk.redisvelocity.RedisVelocityAPI;
+import io.github.invvk.redisvelocity.events.PubSubMessageEvent;
 import org.checkerframework.checker.nullness.qual.NonNull;
 
 import java.util.UUID;
@@ -11,9 +15,10 @@ import java.util.UUID;
 public class InvvkRedisVelocityAPI extends FakeRedisVelocityAPI {
 	private final RedisVelocityAPI API;
 
-	public InvvkRedisVelocityAPI() {
+	public InvvkRedisVelocityAPI(ProxyServer pProxyServer, Object pMainPluginObject) {
 		super();
 		API = RedisVelocityAPI.getRedisVelocityApi();
+		pProxyServer.getEventManager().register(pMainPluginObject, this);
 	}
 
 	@Override
@@ -39,6 +44,11 @@ public class InvvkRedisVelocityAPI extends FakeRedisVelocityAPI {
 	@Override
 	public void sendChannelMessage(@NonNull String channel, @NonNull String message) {
 		API.sendChannelMessage(channel, message);
+	}
+
+	@Subscribe
+	public void onPubSubMessage(PubSubMessageEvent pEvent) {
+		PubSubMessageManager.getInstance().invokePubSubMessageEvent(pEvent.getChannel(), pEvent.getMessage());
 	}
 
 	public static boolean isCompatible() {
