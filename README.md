@@ -16,7 +16,7 @@ implementations
 		<dependency>
 			<groupId>de.simonsator</groupId>
 			<artifactId>redisbungee-abstraction-layer-init-bungee</artifactId>
-			<version>2.0.1-RELEASE</version>
+			<version>2.0.2-SNAPSHOT</version>
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
@@ -35,7 +35,7 @@ implementations
 		<dependency>
 			<groupId>de.simonsator</groupId>
 			<artifactId>redisbungee-abstraction-layer-init-velocity</artifactId>
-			<version>2.0.1-RELEASE</version>
+			<version>2.0.2-SNAPSHOT</version>
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
