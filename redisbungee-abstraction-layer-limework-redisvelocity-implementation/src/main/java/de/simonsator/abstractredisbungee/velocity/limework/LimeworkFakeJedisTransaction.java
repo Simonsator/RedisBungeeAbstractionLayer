@@ -1,12 +1,12 @@
-package de.simonsator.abstractredisbungee.invk;
+package de.simonsator.abstractredisbungee.velocity.limework;
 
 import de.simonsator.abstractredisbungee.fakejedis.FakeJedisTransaction;
-import io.github.invvk.redisvelocity.jedis.Transaction;
+import com.imaginarycode.minecraft.redisbungee.internal.jedis.Transaction;
 
-public class InvkFakeJedisTransaction extends FakeJedisTransaction {
+public class LimeworkFakeJedisTransaction extends FakeJedisTransaction {
 	private final Transaction SOURCE;
 
-	public InvkFakeJedisTransaction(Transaction pTransaction) {
+	public LimeworkFakeJedisTransaction(Transaction pTransaction) {
 		SOURCE = pTransaction;
 	}
 

@@ -1,21 +1,21 @@
-package de.simonsator.abstractredisbungee.invk;
+package de.simonsator.abstractredisbungee.velocity.limework;
 
 import de.simonsator.abstractredisbungee.fakejedis.FakeJedis;
 import de.simonsator.abstractredisbungee.fakejedis.FakeJedisPool;
-import io.github.invvk.redisvelocity.jedis.JedisPool;
+import com.imaginarycode.minecraft.redisbungee.internal.jedis.JedisPool;
 
 import java.io.IOException;
 
-public class InvvkFakeJedisPool extends FakeJedisPool {
+public class LimeworkFakeJedisPool extends FakeJedisPool {
 	private final JedisPool SOURCE;
 
-	public InvvkFakeJedisPool(JedisPool pPool) {
+	public LimeworkFakeJedisPool(JedisPool pPool) {
 		SOURCE = pPool;
 	}
 
 	@Override
 	public FakeJedis getResource() {
-		return new InvvkFakeJedis(SOURCE.getResource());
+		return new LimeworkFakeJedis(SOURCE.getResource());
 	}
 
 	@Override

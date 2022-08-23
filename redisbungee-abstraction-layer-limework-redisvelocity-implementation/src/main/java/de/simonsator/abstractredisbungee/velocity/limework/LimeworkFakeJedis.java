@@ -1,16 +1,16 @@
-package de.simonsator.abstractredisbungee.invk;
+package de.simonsator.abstractredisbungee.velocity.limework;
 
 import de.simonsator.abstractredisbungee.fakejedis.FakeJedis;
 import de.simonsator.abstractredisbungee.fakejedis.FakeJedisTransaction;
-import io.github.invvk.redisvelocity.jedis.Jedis;
+import com.imaginarycode.minecraft.redisbungee.internal.jedis.Jedis;
 
 import java.util.List;
 import java.util.Set;
 
-public class InvvkFakeJedis extends FakeJedis {
+public class LimeworkFakeJedis extends FakeJedis {
 	private final Jedis SOURCE;
 
-	public InvvkFakeJedis(Jedis pJedis) {
+	public LimeworkFakeJedis(Jedis pJedis) {
 		SOURCE = pJedis;
 	}
 
@@ -56,7 +56,7 @@ public class InvvkFakeJedis extends FakeJedis {
 
 	@Override
 	public FakeJedisTransaction multi() {
-		return new InvkFakeJedisTransaction(SOURCE.multi());
+		return new LimeworkFakeJedisTransaction(SOURCE.multi());
 	}
 
 	@Override

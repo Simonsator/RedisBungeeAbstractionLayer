@@ -1,29 +1,29 @@
-package de.simonsator.abstractredisbungee.invk;
+package de.simonsator.abstractredisbungee.velocity.limework;
 
+import com.imaginarycode.minecraft.redisbungee.RedisBungeeAPI;
+import com.imaginarycode.minecraft.redisbungee.events.PubSubMessageEvent;
 import com.velocitypowered.api.event.Subscribe;
 import com.velocitypowered.api.proxy.ProxyServer;
 import com.velocitypowered.api.proxy.server.ServerInfo;
 import de.simonsator.abstractredisbungee.FakeRedisVelocityAPI;
 import de.simonsator.abstractredisbungee.events.PubSubMessageManager;
 import de.simonsator.abstractredisbungee.fakejedis.FakeJedisPool;
-import io.github.invvk.redisvelocity.RedisVelocityAPI;
-import io.github.invvk.redisvelocity.events.PubSubMessageEvent;
 import org.checkerframework.checker.nullness.qual.NonNull;
 
 import java.util.UUID;
 
-public class InvvkRedisVelocityAPI extends FakeRedisVelocityAPI {
-	private final RedisVelocityAPI API;
+public class LimeworkRedisVelocityAPI extends FakeRedisVelocityAPI {
+	private final RedisBungeeAPI API;
 
-	public InvvkRedisVelocityAPI(ProxyServer pProxyServer, Object pMainPluginObject) {
+	public LimeworkRedisVelocityAPI(ProxyServer pProxyServer, Object pMainPluginObject) {
 		super();
-		API = RedisVelocityAPI.getRedisVelocityApi();
+		API = RedisBungeeAPI.getRedisBungeeApi();
 		pProxyServer.getEventManager().register(pMainPluginObject, this);
 	}
 
 	@Override
 	public FakeJedisPool getPool() {
-		return new InvvkFakeJedisPool(API.getJedisPool());
+		return new LimeworkFakeJedisPool(API.getJedisPool());
 	}
 
 	@Override
@@ -53,7 +53,7 @@ public class InvvkRedisVelocityAPI extends FakeRedisVelocityAPI {
 
 	public static boolean isCompatible() {
 		try {
-			Class.forName("io.github.invvk.redisvelocity.jedis.JedisPool");
+			Class.forName("com.imaginarycode.minecraft.redisbungee.internal.jedis.JedisPool");
 			return true;
 		} catch (Exception ignored) {
 		}

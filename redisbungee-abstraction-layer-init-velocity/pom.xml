@@ -83,5 +83,11 @@
 			<version>${revision}</version>
 			<scope>compile</scope>
 		</dependency>
+		<dependency>
+			<groupId>de.simonsator</groupId>
+			<artifactId>redisbungee-abstraction-layer-limework-redisvelocity-implementation</artifactId>
+			<version>${revision}</version>
+			<scope>compile</scope>
+		</dependency>
 	</dependencies>
 </project>
