@@ -27,9 +27,8 @@ public class LimeworkRedisBungeeAPI extends CommonLimeworkRedisBungeeAPI {
 		try {
 			Object redisbungee = ProxyServer.getInstance().getPluginManager().getPlugin("RedisBungee");
 			if (redisbungee != null && !(redisbungee instanceof com.imaginarycode.minecraft.redisbungee.RedisBungee)) {
-				if (redisbungee.getClass().getName().equals("com.imaginarycode.minecraft.redisbungee.RedisBungee"))
-					return RedisBungeeAPI.class.getMethod("getServerFor", UUID.class).
-							getReturnType().getName().equals("java.lang.String");
+				return RedisBungeeAPI.class.getMethod("getServerFor", UUID.class).
+						getReturnType().getName().equals("java.lang.String");
 			}
 		} catch (Exception ignored) {
 

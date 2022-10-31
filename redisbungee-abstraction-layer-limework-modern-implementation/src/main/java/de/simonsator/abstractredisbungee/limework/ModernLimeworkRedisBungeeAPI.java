@@ -22,13 +22,13 @@ public class ModernLimeworkRedisBungeeAPI extends CommonLimeworkRedisBungeeAPI {
 	public static boolean isCompatible() {
 		try {
 			Object redisbungee = ProxyServer.getInstance().getPluginManager().getPlugin("RedisBungee");
-			if (redisbungee != null && !(redisbungee instanceof com.imaginarycode.minecraft.redisbungee.RedisBungee)) {
-				if (redisbungee.getClass().getName().equals("com.imaginarycode.minecraft.redisbungee.RedisBungee"))
-					return RedisBungeeAPI.class.getMethod("getServerFor", UUID.class).
-							getReturnType().getName().equals("net.md_5.bungee.api.config.ServerInfo");
+			if (redisbungee instanceof com.imaginarycode.minecraft.redisbungee.RedisBungee) {
+				Class.forName("com.imaginarycode.minecraft.redisbungee.AbstractRedisBungeeAPI");
+				return RedisBungeeAPI.class.getMethod("getServerFor", UUID.class).
+						getReturnType().getName().equals("net.md_5.bungee.api.config.ServerInfo");
 			}
 		} catch (Exception ignored) {
-
+			ignored.printStackTrace();
 		}
 		return false;
 	}
