@@ -46,7 +46,7 @@
 		</dependency>
 		<dependency>
 			<groupId>de.simonsator</groupId>
-			<artifactId>redisbungge-abstraction-layer-limework-common</artifactId>
+			<artifactId>redisbungee-abstraction-layer-limework-common</artifactId>
 			<version>${revision}</version>
 			<scope>compile</scope>
 		</dependency>
