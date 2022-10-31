@@ -10,6 +10,7 @@ public class LegacyFakeJedisTransaction extends FakeJedisTransaction {
 		SOURCE = pTransaction;
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public void setex(String key, int seconds, String value) {
 		SOURCE.setex(key, seconds, value);

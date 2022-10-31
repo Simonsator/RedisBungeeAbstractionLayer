@@ -49,6 +49,7 @@ public class LegacyFakeJedis extends FakeJedis {
 		return SOURCE.set(key, value);
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public String setex(String key, int seconds, String value) {
 		return SOURCE.setex(key, seconds, value);

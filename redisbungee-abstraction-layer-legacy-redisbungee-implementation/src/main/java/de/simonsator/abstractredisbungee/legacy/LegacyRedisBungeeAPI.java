@@ -19,6 +19,7 @@ public class LegacyRedisBungeeAPI extends FakeRedisBungeeAPI implements Listener
 	private final RedisBungeeAPI API;
 	private final RedisBungee REDIS_BUNGEE_PLUGIN;
 
+	@SuppressWarnings("deprecation")
 	public LegacyRedisBungeeAPI(Plugin pPluginInstance) {
 		super();
 		REDIS_BUNGEE_PLUGIN = (RedisBungee) ProxyServer.getInstance().getPluginManager().getPlugin("RedisBungee");
