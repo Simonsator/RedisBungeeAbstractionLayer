@@ -1,45 +1,39 @@
-package de.simonsator.abstractredisbungee.legacy;
+package de.simonsator.abstractredisbungee.velocity.limework;
 
-import com.imaginarycode.minecraft.redisbungee.RedisBungee;
 import com.imaginarycode.minecraft.redisbungee.RedisBungeeAPI;
 import com.imaginarycode.minecraft.redisbungee.events.PubSubMessageEvent;
-import de.simonsator.abstractredisbungee.FakeRedisBungeeAPI;
+import com.velocitypowered.api.event.Subscribe;
+import com.velocitypowered.api.proxy.ProxyServer;
+import com.velocitypowered.api.proxy.server.ServerInfo;
+import de.simonsator.abstractredisbungee.FakeRedisVelocityAPI;
 import de.simonsator.abstractredisbungee.events.PubSubMessageManager;
 import de.simonsator.abstractredisbungee.fakejedis.FakeJedisPool;
-import net.md_5.bungee.api.ProxyServer;
-import net.md_5.bungee.api.config.ServerInfo;
-import net.md_5.bungee.api.plugin.Listener;
-import net.md_5.bungee.api.plugin.Plugin;
-import net.md_5.bungee.event.EventHandler;
+import de.simonsator.abstractredisbungee.limework.common.LimeworkFakeJedisPool;
 import org.checkerframework.checker.nullness.qual.NonNull;
 
 import java.util.UUID;
 
-public class LegacyRedisBungeeAPI extends FakeRedisBungeeAPI implements Listener {
+public class LimeworkRedisVelocityAPI extends FakeRedisVelocityAPI {
 	private final RedisBungeeAPI API;
-	private final RedisBungee REDIS_BUNGEE_PLUGIN;
 
-	@SuppressWarnings("deprecation")
-	public LegacyRedisBungeeAPI(Plugin pPluginInstance) {
+	public LimeworkRedisVelocityAPI(ProxyServer pProxyServer, Object pMainPluginObject) {
 		super();
-		REDIS_BUNGEE_PLUGIN = (RedisBungee) ProxyServer.getInstance().getPluginManager().getPlugin("RedisBungee");
-		API = RedisBungee.getApi();
-		ProxyServer.getInstance().getPluginManager().registerListener(pPluginInstance, this);
+		API = RedisBungeeAPI.getRedisBungeeApi();
+		pProxyServer.getEventManager().register(pMainPluginObject, this);
 	}
 
 	public static boolean isCompatible() {
 		try {
-			if (ProxyServer.getInstance().getPluginManager().getPlugin("RedisBungee") instanceof RedisBungee)
-				return true;
+			Class.forName("com.imaginarycode.minecraft.redisbungee.internal.jedis.JedisPool");
+			return true;
 		} catch (Exception ignored) {
-
 		}
 		return false;
 	}
 
 	@Override
 	public FakeJedisPool getPool() {
-		return new LegacyFakeJedisPool(REDIS_BUNGEE_PLUGIN.getPool());
+		return new LimeworkFakeJedisPool(API);
 	}
 
 	@Override
@@ -62,7 +56,7 @@ public class LegacyRedisBungeeAPI extends FakeRedisBungeeAPI implements Listener
 		API.sendChannelMessage(channel, message);
 	}
 
-	@EventHandler
+	@Subscribe
 	public void onPubSubMessage(PubSubMessageEvent pEvent) {
 		PubSubMessageManager.getInstance().invokePubSubMessageEvent(pEvent.getChannel(), pEvent.getMessage());
 	}

@@ -21,6 +21,15 @@ public class InvvkRedisVelocityAPI extends FakeRedisVelocityAPI {
 		pProxyServer.getEventManager().register(pMainPluginObject, this);
 	}
 
+	public static boolean isCompatible() {
+		try {
+			Class.forName("io.github.invvk.redisvelocity.jedis.JedisPool");
+			return true;
+		} catch (Exception ignored) {
+		}
+		return false;
+	}
+
 	@Override
 	public FakeJedisPool getPool() {
 		return new InvvkFakeJedisPool(API.getJedisPool());
@@ -49,14 +58,5 @@ public class InvvkRedisVelocityAPI extends FakeRedisVelocityAPI {
 	@Subscribe
 	public void onPubSubMessage(PubSubMessageEvent pEvent) {
 		PubSubMessageManager.getInstance().invokePubSubMessageEvent(pEvent.getChannel(), pEvent.getMessage());
-	}
-
-	public static boolean isCompatible() {
-		try {
-			Class.forName("io.github.invvk.redisvelocity.jedis.JedisPool");
-			return true;
-		} catch (Exception ignored) {
-		}
-		return false;
 	}
 }

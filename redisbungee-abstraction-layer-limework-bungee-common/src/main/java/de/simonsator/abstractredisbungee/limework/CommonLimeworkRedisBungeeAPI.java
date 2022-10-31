@@ -1,13 +1,12 @@
-package de.simonsator.abstractredisbungee.legacy;
+package de.simonsator.abstractredisbungee.limework;
 
-import com.imaginarycode.minecraft.redisbungee.RedisBungee;
 import com.imaginarycode.minecraft.redisbungee.RedisBungeeAPI;
 import com.imaginarycode.minecraft.redisbungee.events.PubSubMessageEvent;
 import de.simonsator.abstractredisbungee.FakeRedisBungeeAPI;
 import de.simonsator.abstractredisbungee.events.PubSubMessageManager;
 import de.simonsator.abstractredisbungee.fakejedis.FakeJedisPool;
+import de.simonsator.abstractredisbungee.limework.common.LimeworkFakeJedisPool;
 import net.md_5.bungee.api.ProxyServer;
-import net.md_5.bungee.api.config.ServerInfo;
 import net.md_5.bungee.api.plugin.Listener;
 import net.md_5.bungee.api.plugin.Plugin;
 import net.md_5.bungee.event.EventHandler;
@@ -15,41 +14,23 @@ import org.checkerframework.checker.nullness.qual.NonNull;
 
 import java.util.UUID;
 
-public class LegacyRedisBungeeAPI extends FakeRedisBungeeAPI implements Listener {
-	private final RedisBungeeAPI API;
-	private final RedisBungee REDIS_BUNGEE_PLUGIN;
+public abstract class CommonLimeworkRedisBungeeAPI extends FakeRedisBungeeAPI implements Listener {
+	protected final RedisBungeeAPI API;
 
-	@SuppressWarnings("deprecation")
-	public LegacyRedisBungeeAPI(Plugin pPluginInstance) {
+	public CommonLimeworkRedisBungeeAPI(Plugin pPluginInstance) {
 		super();
-		REDIS_BUNGEE_PLUGIN = (RedisBungee) ProxyServer.getInstance().getPluginManager().getPlugin("RedisBungee");
-		API = RedisBungee.getApi();
+		API = RedisBungeeAPI.getRedisBungeeApi();
 		ProxyServer.getInstance().getPluginManager().registerListener(pPluginInstance, this);
-	}
-
-	public static boolean isCompatible() {
-		try {
-			if (ProxyServer.getInstance().getPluginManager().getPlugin("RedisBungee") instanceof RedisBungee)
-				return true;
-		} catch (Exception ignored) {
-
-		}
-		return false;
 	}
 
 	@Override
 	public FakeJedisPool getPool() {
-		return new LegacyFakeJedisPool(REDIS_BUNGEE_PLUGIN.getPool());
+		return new LimeworkFakeJedisPool(API);
 	}
 
 	@Override
 	public boolean isPlayerOnline(@NonNull UUID player) {
 		return API.isPlayerOnline(player);
-	}
-
-	@Override
-	public ServerInfo getServerFor(@NonNull UUID player) {
-		return API.getServerFor(player);
 	}
 
 	@Override
