@@ -89,5 +89,11 @@
 			<version>${revision}</version>
 			<scope>compile</scope>
 		</dependency>
+		<dependency>
+			<groupId>de.simonsator</groupId>
+			<artifactId>redisbungee-abstraction-layer-limework-modern-implementation</artifactId>
+			<version>${revision}</version>
+			<scope>compile</scope>
+		</dependency>
 	</dependencies>
 </project>

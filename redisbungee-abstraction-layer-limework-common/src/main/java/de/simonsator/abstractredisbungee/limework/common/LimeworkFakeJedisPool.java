@@ -1,11 +1,8 @@
-package de.simonsator.abstractredisbungee.limework;
+package de.simonsator.abstractredisbungee.limework.common;
 
 import com.imaginarycode.minecraft.redisbungee.RedisBungeeAPI;
-import com.imaginarycode.minecraft.redisbungee.internal.jedis.JedisPool;
 import de.simonsator.abstractredisbungee.fakejedis.FakeJedis;
 import de.simonsator.abstractredisbungee.fakejedis.FakeJedisPool;
-
-import java.io.IOException;
 
 public class LimeworkFakeJedisPool extends FakeJedisPool {
 	private final RedisBungeeAPI SOURCE;

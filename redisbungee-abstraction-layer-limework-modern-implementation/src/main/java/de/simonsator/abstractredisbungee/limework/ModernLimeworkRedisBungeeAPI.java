@@ -8,18 +8,14 @@ import org.checkerframework.checker.nullness.qual.NonNull;
 
 import java.util.UUID;
 
-public class LimeworkRedisBungeeAPI extends CommonLimeworkRedisBungeeAPI {
-
-	public LimeworkRedisBungeeAPI(Plugin pPluginInstance) {
+public class ModernLimeworkRedisBungeeAPI extends CommonLimeworkRedisBungeeAPI {
+	public ModernLimeworkRedisBungeeAPI(Plugin pPluginInstance) {
 		super(pPluginInstance);
 	}
 
 	@Override
 	public ServerInfo getServerFor(@NonNull UUID player) {
-		String info = API.getServerFor(player);
-		if (info != null)
-			return ProxyServer.getInstance().getServerInfo(info);
-		return null;
+		return API.getServerFor(player);
 	}
 
 	@SuppressWarnings("deprecation")
@@ -29,7 +25,7 @@ public class LimeworkRedisBungeeAPI extends CommonLimeworkRedisBungeeAPI {
 			if (redisbungee != null && !(redisbungee instanceof com.imaginarycode.minecraft.redisbungee.RedisBungee)) {
 				if (redisbungee.getClass().getName().equals("com.imaginarycode.minecraft.redisbungee.RedisBungee"))
 					return RedisBungeeAPI.class.getMethod("getServerFor", UUID.class).
-							getReturnType().getName().equals("java.lang.String");
+							getReturnType().getName().equals("net.md_5.bungee.api.config.ServerInfo");
 			}
 		} catch (Exception ignored) {
 

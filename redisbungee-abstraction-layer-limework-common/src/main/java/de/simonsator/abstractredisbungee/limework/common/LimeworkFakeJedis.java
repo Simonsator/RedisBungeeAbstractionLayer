@@ -1,8 +1,8 @@
-package de.simonsator.abstractredisbungee.velocity.limework;
+package de.simonsator.abstractredisbungee.limework.common;
 
+import com.imaginarycode.minecraft.redisbungee.internal.jedis.Jedis;
 import de.simonsator.abstractredisbungee.fakejedis.FakeJedis;
 import de.simonsator.abstractredisbungee.fakejedis.FakeJedisTransaction;
-import com.imaginarycode.minecraft.redisbungee.internal.jedis.Jedis;
 
 import java.util.List;
 import java.util.Set;

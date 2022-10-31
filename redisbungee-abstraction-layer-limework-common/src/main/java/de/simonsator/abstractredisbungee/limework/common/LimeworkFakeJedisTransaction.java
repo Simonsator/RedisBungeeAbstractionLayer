@@ -1,4 +1,4 @@
-package de.simonsator.abstractredisbungee.limework;
+package de.simonsator.abstractredisbungee.limework.common;
 
 import com.imaginarycode.minecraft.redisbungee.internal.jedis.Transaction;
 import de.simonsator.abstractredisbungee.fakejedis.FakeJedisTransaction;
