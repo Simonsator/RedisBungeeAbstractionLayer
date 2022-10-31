@@ -46,3 +46,15 @@ implementations
 When starting your plugin call ```FakeRedisBungeeInit.init()``` on Bungeecord and ```FakeRedisVelocityInit.init()``` on
 Velocityto load the correct abstraction layer for your RedisBungee version. After that you may use
 ```FakeRedisBungeeAPI.getApi()``` for all RedisBungee calls.
+
+## Supported RedisBungee Versions
+
+* Original RedisBungee (the module which contains the code for the original RedisBungee is called
+  ```redisbungee-abstraction-layer-legacy-redisbungee-implementation```)
+* Limework RedisBungee for Bungeecord (the module which contains the code for the original RedisBungee is called
+  ```redisbungee-abstraction-layer-limework-implementation``` for Limework up to version 0.7.2 and
+  ```redisbungee-abstraction-layer-limework-modern-implementation``` for Limework 0.8.0 and higher)
+* Invk RedisVelocity (the module which contains the code for the Invk RedisVelocity is called
+  ```redisbungee-abstraction-layer-invk-redisvelocity-implementation```)
+* Limework RedisBungee for Velocity (the module which contains the code for the Limework for Velocity is called
+  ```redisbungee-abstraction-layer-limework-redisvelocity-implementation```)
