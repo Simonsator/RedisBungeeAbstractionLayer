@@ -6,12 +6,12 @@
 
 	<groupId>de.simonsator</groupId>
 	<artifactId>redisbungee-abstraction-layer</artifactId>
-	<version>2.0.2-SNAPSHOT</version>
+	<version>2.0.2-RELEASE</version>
 	<packaging>pom</packaging>
 	<name>redisbungee-abstraction-layer</name>
 	<url>https://github.com/Simonsator/RedisBungeeAbstractionLayer</url>
 	<properties>
-		<revision>2.0.2-SNAPSHOT</revision>
+		<revision>2.0.2-RELEASE</revision>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
