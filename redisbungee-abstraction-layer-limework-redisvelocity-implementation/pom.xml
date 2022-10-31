@@ -26,9 +26,9 @@
 	</repositories>
 	<dependencies>
 		<dependency>
-			<groupId>com.imaginarycode.minecraft</groupId>
+			<groupId>com.github.limework.redisbungee</groupId>
 			<artifactId>RedisBungee-Velocity</artifactId>
-			<version>0.8.0-SNAPSHOT</version>
+			<version>0.8.0-FixJitPack</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
