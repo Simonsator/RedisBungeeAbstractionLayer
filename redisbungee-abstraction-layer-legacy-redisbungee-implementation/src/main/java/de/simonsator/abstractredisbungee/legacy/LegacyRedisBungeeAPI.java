@@ -26,6 +26,16 @@ public class LegacyRedisBungeeAPI extends FakeRedisBungeeAPI implements Listener
 		ProxyServer.getInstance().getPluginManager().registerListener(pPluginInstance, this);
 	}
 
+	public static boolean isCompatible() {
+		try {
+			if (ProxyServer.getInstance().getPluginManager().getPlugin("RedisBungee") instanceof RedisBungee)
+				return true;
+		} catch (Exception ignored) {
+
+		}
+		return false;
+	}
+
 	@Override
 	public FakeJedisPool getPool() {
 		return new LegacyFakeJedisPool(REDIS_BUNGEE_PLUGIN.getPool());
@@ -49,16 +59,6 @@ public class LegacyRedisBungeeAPI extends FakeRedisBungeeAPI implements Listener
 	@Override
 	public void sendChannelMessage(@NonNull String channel, @NonNull String message) {
 		API.sendChannelMessage(channel, message);
-	}
-
-	public static boolean isCompatible() {
-		try {
-			if (ProxyServer.getInstance().getPluginManager().getPlugin("RedisBungee") instanceof RedisBungee)
-				return true;
-		} catch (Exception ignored) {
-
-		}
-		return false;
 	}
 
 	@EventHandler

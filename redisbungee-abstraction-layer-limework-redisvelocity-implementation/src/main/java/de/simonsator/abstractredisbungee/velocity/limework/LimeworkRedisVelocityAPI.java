@@ -22,6 +22,15 @@ public class LimeworkRedisVelocityAPI extends FakeRedisVelocityAPI {
 		pProxyServer.getEventManager().register(pMainPluginObject, this);
 	}
 
+	public static boolean isCompatible() {
+		try {
+			Class.forName("com.imaginarycode.minecraft.redisbungee.internal.jedis.JedisPool");
+			return true;
+		} catch (Exception ignored) {
+		}
+		return false;
+	}
+
 	@Override
 	public FakeJedisPool getPool() {
 		return new LimeworkFakeJedisPool(API);
@@ -50,14 +59,5 @@ public class LimeworkRedisVelocityAPI extends FakeRedisVelocityAPI {
 	@Subscribe
 	public void onPubSubMessage(PubSubMessageEvent pEvent) {
 		PubSubMessageManager.getInstance().invokePubSubMessageEvent(pEvent.getChannel(), pEvent.getMessage());
-	}
-
-	public static boolean isCompatible() {
-		try {
-			Class.forName("com.imaginarycode.minecraft.redisbungee.internal.jedis.JedisPool");
-			return true;
-		} catch (Exception ignored) {
-		}
-		return false;
 	}
 }

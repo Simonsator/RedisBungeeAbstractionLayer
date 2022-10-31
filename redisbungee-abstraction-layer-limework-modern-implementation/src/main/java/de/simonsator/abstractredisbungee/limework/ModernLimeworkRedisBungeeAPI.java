@@ -13,11 +13,6 @@ public class ModernLimeworkRedisBungeeAPI extends CommonLimeworkRedisBungeeAPI {
 		super(pPluginInstance);
 	}
 
-	@Override
-	public ServerInfo getServerFor(@NonNull UUID player) {
-		return API.getServerFor(player);
-	}
-
 	@SuppressWarnings("deprecation")
 	public static boolean isCompatible() {
 		try {
@@ -31,5 +26,10 @@ public class ModernLimeworkRedisBungeeAPI extends CommonLimeworkRedisBungeeAPI {
 			ignored.printStackTrace();
 		}
 		return false;
+	}
+
+	@Override
+	public ServerInfo getServerFor(@NonNull UUID player) {
+		return API.getServerFor(player);
 	}
 }

@@ -14,14 +14,6 @@ public class LimeworkRedisBungeeAPI extends CommonLimeworkRedisBungeeAPI {
 		super(pPluginInstance);
 	}
 
-	@Override
-	public ServerInfo getServerFor(@NonNull UUID player) {
-		String info = API.getServerFor(player);
-		if (info != null)
-			return ProxyServer.getInstance().getServerInfo(info);
-		return null;
-	}
-
 	@SuppressWarnings("deprecation")
 	public static boolean isCompatible() {
 		try {
@@ -34,5 +26,13 @@ public class LimeworkRedisBungeeAPI extends CommonLimeworkRedisBungeeAPI {
 
 		}
 		return false;
+	}
+
+	@Override
+	public ServerInfo getServerFor(@NonNull UUID player) {
+		String info = API.getServerFor(player);
+		if (info != null)
+			return ProxyServer.getInstance().getServerInfo(info);
+		return null;
 	}
 }

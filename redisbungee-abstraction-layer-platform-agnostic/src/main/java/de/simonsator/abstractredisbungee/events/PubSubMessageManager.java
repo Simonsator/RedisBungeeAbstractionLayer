@@ -7,12 +7,12 @@ public class PubSubMessageManager {
 	private static PubSubMessageManager instance;
 	private final List<PubSubMessageListener> LISTENERS = new LinkedList<>();
 
-	public static PubSubMessageManager getInstance() {
-		return instance;
-	}
-
 	public PubSubMessageManager() {
 		instance = this;
+	}
+
+	public static PubSubMessageManager getInstance() {
+		return instance;
 	}
 
 	public void registerPubSubMessageEvent(PubSubMessageListener pReceiver) {
