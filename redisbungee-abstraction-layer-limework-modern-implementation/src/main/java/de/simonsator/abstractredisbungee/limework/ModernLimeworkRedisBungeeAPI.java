@@ -23,7 +23,6 @@ public class ModernLimeworkRedisBungeeAPI extends CommonLimeworkRedisBungeeAPI {
 						getReturnType().getName().equals("net.md_5.bungee.api.config.ServerInfo");
 			}
 		} catch (Exception ignored) {
-			ignored.printStackTrace();
 		}
 		return false;
 	}
