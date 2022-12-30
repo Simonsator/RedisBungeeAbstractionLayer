@@ -5,7 +5,7 @@ implementations
 
 ## Maven For Bungeecord
 
-```
+```xml
 	<repositories>
 		<repository>
 			<id>simonsators Repo</id>
@@ -24,7 +24,7 @@ implementations
 
 ## Maven For Velocity
 
-```
+```xml
 	<repositories>
 		<repository>
 			<id>simonsators Repo</id>
